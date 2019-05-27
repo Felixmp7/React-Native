@@ -27,6 +27,10 @@ export default class App extends Component<Props> {
           //  uri: me sirve para solicitar imagenes por ejemplo de internet
           // }}
           source={require('./assets/logo.png')}
+          // style={{ style me sirve para escribir el css directo
+          //   width: 200,
+          //   height: 50
+          //   }}
         />
         <Text style={styles.welcome}>Hello World desde React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
