@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, Image} from 'react-native';
 
 const instructions = Platform.select({ //Platform nos ayuda como una especie de
   // if condicional, si estamos en ios has esto, si estamos en android has esto.
@@ -22,6 +22,12 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
+        <Image
+          // source={{
+          //  uri: me sirve para solicitar imagenes por ejemplo de internet
+          // }}
+          source={require('./assets/logo.png')}
+        />
         <Text style={styles.welcome}>Hello World desde React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
