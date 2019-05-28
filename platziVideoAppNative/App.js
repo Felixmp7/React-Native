@@ -1,64 +1,18 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Image} from 'react-native';
+import {Text} from 'react-native';
 
-const instructions = Platform.select({ //Platform nos ayuda como una especie de
-  // if condicional, si estamos en ios has esto, si estamos en android has esto.
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import Home from './src/screens/containers/Home'
 
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}>
-        <Image
-          // source={{
-          //  uri: me sirve para solicitar imagenes por ejemplo de internet
-          // }}
-          source={require('./assets/logo.png')}
-          // style={{ style me sirve para escribir el css directo
-          //   width: 200,
-          //   height: 50
-          //   }}
-        />
-        <Text style={styles.welcome}>Hello World desde React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
+      <Home>
+        <Text>Aqui va el Header</Text>
+        <Text>Aqui va el buscador</Text>
+        <Text>Aqui van categorias</Text>
+        <Text>Aqui van las Sugerencias</Text>
+      </Home>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: Platform.select({
-      ios: 'white',
-      android: 'lightblue'
-      })
-    // Utilizando el Platform.select({}) puedo establecer estilos para ios y android
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
