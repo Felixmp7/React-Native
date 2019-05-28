@@ -1,3 +1,4 @@
+//React and Native Components
 import React from 'react';
 import {
   View,
