@@ -45,7 +45,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: Platform.select({
+      ios: 'white',
+      android: 'lightblue'
+      })
+    // Utilizando el Platform.select({}) puedo establecer estilos para ios y android
   },
   welcome: {
     fontSize: 20,
