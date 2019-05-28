@@ -11,9 +11,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <Home>
-        <Header>
-          <Text>Busca</Text>
-        </Header>
+        <Header/>
         <Text>Aqui va el buscador</Text>
         <Text>Aqui van categorias</Text>
         <Text>Aqui van las Sugerencias</Text>
