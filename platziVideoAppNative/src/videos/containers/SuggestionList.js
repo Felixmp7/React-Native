@@ -22,7 +22,7 @@ class SuggestionList extends Component {
     ]
     return (
       <Layout
-        title="Sugerencias para ti"
+        title="Recomendado para ti"
       >
         <FlatList
           data={list}
