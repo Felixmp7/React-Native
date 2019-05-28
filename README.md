@@ -34,3 +34,17 @@ Aunque es bastante recomendado que practiquemos antes desarollando nuestros esti
     paddingVertical: esto sería lo equivalente a utilizar (paddingTop y paddingBottom)
 
     paddingHorizontal: esto sería lo equivalente a utilizar (paddingRight y paddingLeft)
+
+## Listas en React Native.
+
+React N tiene dos tipos de Listas para usar.
+
+- FlatList
+- SectionList
+
+**FlatList**: Puede ser utilizada para listas sencillas
+
+Las propiedades que tienen son:
+
+  - data => Recibe un array de obj o un json. Este vendría a ser el listado
+  - renderItem => Es una prop que recibe un componente a renderizar, hace algo similar a un “.map()” sobre la lista pasada a Data, por lo tanto recibimos al listado como propiedad, al cual podemos hacerle un “destructuring” pasandole mediante llaves al elemento.
