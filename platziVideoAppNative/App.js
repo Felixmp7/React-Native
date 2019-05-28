@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
       ios: 'white',
       android: 'lightblue'
       })
-    // Utilizando el Platform.select({}) puedo establecer estilos para ios y android 
+    // Utilizando el Platform.select({}) puedo establecer estilos para ios y android
   },
   welcome: {
     fontSize: 20,
