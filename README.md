@@ -18,7 +18,19 @@ Para proyectos que no requieran de estilos totalmente personalizados podemos uti
   - Native Base en lo personal mi favorita ya que trae una gran variedad de componentes que pueden ver aquí.
 
   - React Native Material UI, basada en el estándar Material de Google, pueden ver los componentes que trae aquí.
-  
+
   - React Native Easy Grid Este es un paquete desarrollado por los autores de Native Base, y sirve para hacer layouts bastante complejos de una manera bastante intuitiva.
 
 Aunque es bastante recomendado que practiquemos antes desarollando nuestros estilos de una forma más vanilla, sin el uso de paquetes de terceros.
+
+    - SafeAreaView - renderiza el contenido en un area segura para que el contenido se vea bien en todos los dispositivos principalmente los que tienen un notch
+
+    - Estilos para imagenes dentro de RN, se llama resizeMode que sería similar a background-size de css.
+
+    **_resizeMode_** por Default esta en cover, otras opciones son contain, stretch, repeat, center.
+
+    - El padding en RN funciona un poco diferente ya que se le puede dar un padding general (top, right, bottom, left), pero si se quiere hacer solamente para right & left se tiene que hacer a mano. Para estos casos se agregan 2 opciones para utilizar:
+
+    paddingVertical: esto sería lo equivalente a utilizar (paddingTop y paddingBottom)
+
+    paddingHorizontal: esto sería lo equivalente a utilizar (paddingRight y paddingLeft)
