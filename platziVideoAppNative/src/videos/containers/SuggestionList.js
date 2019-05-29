@@ -22,6 +22,14 @@ class SuggestionList extends Component {
         title: 'Pokemon',
         key: '2'
       },
+      {
+        title: 'Dragon Ball',
+        key: '3'
+      },
+      {
+        title: 'GOT',
+        key: '4'
+      },
     ]
     return (
       <Layout
