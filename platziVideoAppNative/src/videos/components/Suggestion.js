@@ -17,13 +17,13 @@ const Suggestion = props => {
           }}
         />
         <View style={styles.genre}>
-          <Text style={styles.genreText}>{props.genre}</Text>
+          <Text style={styles.genreText}>{props.genres[0]}</Text>
         </View>
       </View>
       <View style={styles.right}>
         <Text style={styles.title}>{props.title}</Text>
         <Text style={styles.year}>{props.year}</Text>
-        <Text style={styles.rating}>{props.rating}</Text>
+        <Text style={styles.rating}>{props.rating} Stars</Text>
       </View>
     </View>
   );
