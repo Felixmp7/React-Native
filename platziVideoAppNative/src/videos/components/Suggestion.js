@@ -12,7 +12,9 @@ const Suggestion = props => {
       <View style={styles.left}>
         <Image
           style={styles.cover}
-          source={require('../../../assets/logo.png')}
+          source={{
+            uri: props.medium_cover_image
+          }}
         />
         <View style={styles.genre}>
           <Text style={styles.genreText}>{props.genre}</Text>
