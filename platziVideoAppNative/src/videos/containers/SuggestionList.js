@@ -8,10 +8,12 @@ import {
 import Layout from '../components/SuggestionListLayout'
 import Empty from '../components/Empty'
 import VerticalSeparator from '../components/VerticalSeparator'
+import Suggestion from '../components/Suggestion'
 
 class SuggestionList extends Component {
   renderEmpty = () => <Empty text="No hay sugerencias :("/>
   itemSeparator = () => <VerticalSeparator/>
+  renderItem = ({item}) => <Suggestion {...item}/>
   render () {
     const list = [
       {
@@ -37,7 +39,7 @@ class SuggestionList extends Component {
       >
         <FlatList
           data={list}
-          renderItem={({ item }) => <Text>{item.title}</Text>}
+          renderItem={this.renderItem}
           ListEmptyComponent={this.renderEmpty}
           // ListEmptyComponent Me permite renderizar un componente si la lista está vacía.
           ItemSeparatorComponent={this.itemSeparator}
