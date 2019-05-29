@@ -7,9 +7,11 @@ import {
 //Components
 import Layout from '../components/SuggestionListLayout'
 import Empty from '../components/Empty'
+import VerticalSeparator from '../components/VerticalSeparator'
 
 class SuggestionList extends Component {
-  renderEmpty = () => <Empty text="No hay sugerencias"/>
+  renderEmpty = () => <Empty text="No hay sugerencias :("/>
+  itemSeparator = () => <VerticalSeparator/>
   render () {
     const list = [
       {
@@ -29,8 +31,8 @@ class SuggestionList extends Component {
           data={list}
           renderItem={({ item }) => <Text>{item.title}</Text>}
           ListEmptyComponent={this.renderEmpty}
-          // ListEmptyComponent={ () => <Text>No hay elementos en la lista</Text>}
-          // Me permite renderizar un componente si la lista está vacía.
+          // ListEmptyComponent Me permite renderizar un componente si la lista está vacía.
+          ItemSeparatorComponent={this.itemSeparator}
         />
       </Layout>
     )
