@@ -11,6 +11,9 @@ import API from './src/utils/API'
 
 type Props = {};
 export default class App extends Component<Props> {
+  state = {
+    suggestionList: []
+  }
   async componentDidMount(){
     const movies = await API.getSuggestions(10)
     console.log(movies);
@@ -21,7 +24,7 @@ export default class App extends Component<Props> {
         <Header/>
         <Text>Aqui va el buscador</Text>
         <Text>Aqui van categorias</Text>
-        <SuggestionList/>
+        <SuggestionList list={this.state.suggestionList}/>
       </Home>
     );
   }
