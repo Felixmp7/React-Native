@@ -6,6 +6,8 @@ import Home from './src/screens/containers/Home'
 import SuggestionList from './src/videos/containers/SuggestionList'
 //Components
 import Header from './src/sections/components/Header'
+//API
+import Api from './src/utils/API'
 
 type Props = {};
 export default class App extends Component<Props> {
