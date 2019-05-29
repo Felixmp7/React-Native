@@ -17,7 +17,7 @@ export default class App extends Component<Props> {
     loading: true
   }
   async componentDidMount(){
-    const movies = await API.getSuggestions(10)
+    const movies = await API.getSuggestions(20)
     console.log(movies);
     this.setState({
       suggestionList: movies,

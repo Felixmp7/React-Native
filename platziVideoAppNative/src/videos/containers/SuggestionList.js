@@ -23,7 +23,7 @@ class SuggestionList extends Component {
         <FlatList
           data={this.props.list}
           keyExtractor={this.keyExtractor}
-          // keyExtractor
+          // keyExtractor es puro performance, me evita el re renderizado si no hay cambios
           renderItem={this.renderItem}
           ListEmptyComponent={this.renderEmpty}
           // ListEmptyComponent Me permite renderizar un componente si la lista está vacía.
