@@ -18,19 +18,38 @@ class SuggestionList extends Component {
     const list = [
       {
         title: 'Avengers',
+        year: '2007',
+        rating: '5 Estrellas',
+        genre: 'Accion',
         key: '1'
       },
       {
         title: 'Pokemon',
+        year: '2004',
+        rating: '4 Estrellas',
+        genre: 'Anime',
         key: '2'
       },
       {
-        title: 'Dragon Ball',
+        title: 'La Sospecha',
+        year: '2012',
+        rating: '5 Estrellas',
+        genre: 'Intriga',
         key: '3'
       },
       {
         title: 'GOT',
+        year: '2012',
+        rating: '5 Estrellas',
+        genre: 'Guerra y Fantasía',
         key: '4'
+      },
+      {
+        title: 'Star Wars',
+        year: '1985',
+        rating: '4 Estrellas',
+        genre: 'Guerra y Fantasía',
+        key: '5'
       },
     ]
     return (
