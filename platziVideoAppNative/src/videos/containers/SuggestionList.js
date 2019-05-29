@@ -11,7 +11,16 @@ import Empty from '../components/Empty'
 class SuggestionList extends Component {
   renderEmpty = () => <Empty text="No hay sugerencias"/>
   render () {
-    const list = []
+    const list = [
+      {
+        title: 'Avengers',
+        key: '1'
+      },
+      {
+        title: 'Pokemon',
+        key: '2'
+      },
+    ]
     return (
       <Layout
         title="Recomendado para ti"
