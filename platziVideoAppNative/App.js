@@ -25,17 +25,18 @@ export default class App extends Component<Props> {
     })
   }
   render() {
+    const {loading, suggestionList} = this.state
     return (
       <Home>
         <Header/>
         <Text>Aqui va el buscador</Text>
         <Text>Aqui van categorias</Text>
         {
-          this.state.loading ? (
+          loading ? (
             <Loader />
           )
           : (
-            <SuggestionList list={this.state.suggestionList}/>
+            <SuggestionList list={suggestionList}/>
           )
         }
       </Home>
