@@ -11,14 +11,7 @@ import Layout from '../components/SuggestionListLayout'
 class SuggestionList extends Component {
   render () {
     const list = [
-      {
-        title: 'leo',
-        key: '1'
-      },
-      {
-        title: 'nidas',
-        key: '2'
-      }
+      
     ]
     return (
       <Layout
@@ -27,6 +20,9 @@ class SuggestionList extends Component {
         <FlatList
           data={list}
           renderItem={({ item }) => <Text>{item.title}</Text>}
+          ListEmptyComponent={ () => <Text>No hay elementos en la lista</Text>}
+          // ListEmptyComponent={ () => <Text>No hay elementos en la lista</Text>}
+          // Me permite renderizar un componente si la lista está vacía.
         />
       </Layout>
     )
