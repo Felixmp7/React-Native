@@ -7,6 +7,7 @@ import {
 } from 'react-native'
 
 const Suggestion = props => {
+  let genre = props.genres? props.genres[0] : "No category"
   return (
     <View style={styles.container}>
       <View style={styles.left}>

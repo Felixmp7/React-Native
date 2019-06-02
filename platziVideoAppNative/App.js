@@ -4,7 +4,7 @@ import {Text} from 'react-native';
 //Containers
 import Home from './src/screens/containers/Home'
 import SuggestionList from './src/videos/containers/SuggestionList'
-import CategoryList from './src/videos/container/CategoryList'
+import CategoryList from './src/videos/containers/CategoryList'
 //Components
 import Header from './src/sections/components/Header'
 import Loader from './src/widgets/components/Loader'
@@ -45,8 +45,8 @@ export default class App extends Component<Props> {
             <Loader />
           )
           : (
+            <CategoryList list={categoryList} />
             <SuggestionList list={suggestionList}/>
-            <CategoryList list={categoryList}/>
           )
         }
       </Home>
