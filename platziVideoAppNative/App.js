@@ -4,6 +4,7 @@ import {Text} from 'react-native';
 //Containers
 import Home from './src/screens/containers/Home'
 import SuggestionList from './src/videos/containers/SuggestionList'
+import CategoryList from './src/videos/container/CategoryList'
 //Components
 import Header from './src/sections/components/Header'
 import Loader from './src/widgets/components/Loader'
@@ -14,7 +15,8 @@ type Props = {};
 export default class App extends Component<Props> {
   state = {
     suggestionList: [],
-    loading: true
+    loading: true,
+    categoryList: []
   }
   async componentDidMount(){
     const movies = await API.getSuggestions(20)
@@ -28,7 +30,11 @@ export default class App extends Component<Props> {
     })
   }
   render() {
-    const {loading, suggestionList} = this.state
+    const {
+      loading,
+      suggestionList,
+      categoryList
+    } = this.state
     return (
       <Home>
         <Header/>
@@ -40,6 +46,7 @@ export default class App extends Component<Props> {
           )
           : (
             <SuggestionList list={suggestionList}/>
+            <CategoryList list={categoryList}/>
           )
         }
       </Home>
