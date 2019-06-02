@@ -23,7 +23,8 @@ export default class App extends Component<Props> {
     console.log(categories)
     this.setState({
       suggestionList: movies,
-      loading: false
+      loading: false,
+      categoryList: categories
     })
   }
   render() {
