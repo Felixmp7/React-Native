@@ -19,7 +19,7 @@ export default class App extends Component<Props> {
     categoryList: []
   }
   async componentDidMount(){
-    const movies = await API.getSuggestions(20)
+    const movies = await API.getSuggestions(10)
     const categories = await API.getMovies()
     console.log(movies)
     console.log(categories)
