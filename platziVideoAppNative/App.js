@@ -1,6 +1,6 @@
 //React and Native Components
 import React, {Component} from 'react';
-import {Text} from 'react-native';
+import {Text, View} from 'react-native';
 //Containers
 import Home from './src/screens/containers/Home'
 import SuggestionList from './src/videos/containers/SuggestionList'
@@ -46,8 +46,10 @@ export default class App extends Component<Props> {
             <Loader />
           )
           :
-            // <CategoryList lista={categoryList} />
-            <SuggestionList list={suggestionList}/>
+            <View>
+              <CategoryList list={categoryList} />
+              <SuggestionList list={suggestionList}/>
+            </View>
         }
       </Home>
     );

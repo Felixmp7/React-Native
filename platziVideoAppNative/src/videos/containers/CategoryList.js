@@ -10,7 +10,7 @@ import Suggestion from '../components/Suggestion'
 
 
 class CategoryList extends Component {
-  renderEmpty = () => <Empty text="No hay sugerencias :("/>
+  renderEmpty = () => <Empty text="No hay Categorias :("/>
   itemSeparator = () => <VerticalSeparator/>
   renderItem = ({item}) => <Suggestion {...item}/>
   keyExtractor = item => item.id.toString()
@@ -18,7 +18,7 @@ class CategoryList extends Component {
     return (
       <FlatList
         horizontal
-        data={this.props.lista}
+        data={this.props.list}
         keyExtractor={this.keyExtractor}
         // keyExtractor es puro performance, me evita el re renderizado si no hay cambios
         renderItem={this.renderItem}
