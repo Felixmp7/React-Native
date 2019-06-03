@@ -3,22 +3,25 @@ import React from 'react'
 import {
   Text,
   View,
-  StyleSheet
+  StyleSheet,
+  ImageBackground
 } from 'react-native'
 
 const CategoryListLayout = props => {
   return (
-    <View syle={styles.container}>
-      <Text style={styles.title}>{props.title}</Text>
-      {props.children}
-    </View>
+    <ImageBackground
+      source={require('../../../assets/background.png')}
+      style={styles.container}
+      >
+        <Text style={styles.title}>{props.title}</Text>
+        {props.children}
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container:{
     paddingVertical: 10,
-    flex: 1
   },
   title:{
     color: '#4c4c4c',
