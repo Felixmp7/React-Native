@@ -12,7 +12,7 @@ import CategoryListLayout from '../components/CategoryListLayout'
 
 class CategoryList extends Component {
   renderEmpty = () => <Empty text="No hay Categorias :("/>
-  itemSeparator = () => <VerticalSeparator/>
+  itemSeparator = () => <VerticalSeparator horizontal/>
   renderItem = ({item}) => <Suggestion {...item}/>
   keyExtractor = item => item.id.toString()
   render () {

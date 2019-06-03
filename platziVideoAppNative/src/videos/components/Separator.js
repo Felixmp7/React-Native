@@ -11,6 +11,7 @@ const Separator = props => {
       styles.separator,
       {
         borderTopColor: (props.color) ? props.color : '#ddd',
+        marginLeft: (props.horizontal) ? 10 : 0
       }
     ]}>
     </View>
