@@ -4,7 +4,7 @@ import {Text} from 'react-native';
 //Containers
 import Home from './src/screens/containers/Home'
 import SuggestionList from './src/videos/containers/SuggestionList'
-import Categoria from './src/videos/containers/CategoryList'
+import CategoryList from './src/videos/containers/CategoryList'
 //Components
 import Header from './src/sections/components/Header'
 import Loader from './src/widgets/components/Loader'
@@ -28,12 +28,13 @@ export default class App extends Component<Props> {
       loading: false,
       categoryList: categories
     })
+    // console.log(this.state);
   }
   render() {
     const {
       loading,
       suggestionList,
-      // categoryList
+      categoryList
     } = this.state
     return (
       <Home>
@@ -45,7 +46,7 @@ export default class App extends Component<Props> {
             <Loader />
           )
           :
-            // <Categoria lista={categoryList} />
+            // <CategoryList lista={categoryList} />
             <SuggestionList list={suggestionList}/>
         }
       </Home>
