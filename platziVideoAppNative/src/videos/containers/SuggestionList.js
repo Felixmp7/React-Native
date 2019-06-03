@@ -7,7 +7,7 @@ import {
 //Components
 import Layout from '../components/SuggestionListLayout'
 import Empty from '../components/Empty'
-import VerticalSeparator from '../components/VerticalSeparator'
+import VerticalSeparator from '../components/Separator'
 import Suggestion from '../components/Suggestion'
 
 class SuggestionList extends Component {

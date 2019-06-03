@@ -5,7 +5,7 @@ import {
 } from 'react-native'
 //Components
 import Empty from '../components/Empty'
-import VerticalSeparator from '../components/VerticalSeparator'
+import VerticalSeparator from '../components/Separator'
 import Suggestion from '../components/Suggestion'
 import CategoryListLayout from '../components/CategoryListLayout'
 
