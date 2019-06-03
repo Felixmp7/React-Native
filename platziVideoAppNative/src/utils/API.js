@@ -15,18 +15,18 @@ class Api {
     }
   }
 
-  // async getMovies(){
-  //     try{
-  //       console.log('Intento de peticion 2');
-  //       const query = await fetch(`${BASE_API}list_movies.json?`)
-  //       const { data } = await query.json()
-  //
-  //       return data.movies
-  //     }
-  //     catch(e){
-  //       console.log('Ha ocurrido un error')
-  //     }
-  // }
+  async getMovies(){
+      try{
+        console.log('Intento de peticion 2');
+        const query = await fetch(`${BASE_API}/list_movies.json?`)
+        const { data } = await query.json()
+
+        return data.movies
+      }
+      catch(e){
+        console.log('Ha ocurrido un error')
+      }
+  }
 }
 
 export default new Api()

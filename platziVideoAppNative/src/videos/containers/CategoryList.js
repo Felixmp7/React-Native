@@ -18,7 +18,7 @@ class CategoryList extends Component {
     return (
       <FlatList
         horizontal
-        data={this.props.list}
+        data={this.props.lista}
         keyExtractor={this.keyExtractor}
         // keyExtractor es puro performance, me evita el re renderizado si no hay cambios
         renderItem={this.renderItem}

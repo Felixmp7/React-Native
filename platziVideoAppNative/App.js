@@ -4,7 +4,7 @@ import {Text} from 'react-native';
 //Containers
 import Home from './src/screens/containers/Home'
 import SuggestionList from './src/videos/containers/SuggestionList'
-//import CategoryList from './src/videos/containers/CategoryList'
+import Categoria from './src/videos/containers/CategoryList'
 //Components
 import Header from './src/sections/components/Header'
 import Loader from './src/widgets/components/Loader'
@@ -20,13 +20,13 @@ export default class App extends Component<Props> {
   }
   async componentDidMount(){
     const movies = await API.getSuggestions(20)
-    //const categories = await API.getMovies()
+    const categories = await API.getMovies()
     console.log(movies)
-    //console.log(categories)
+    console.log(categories)
     this.setState({
       suggestionList: movies,
       loading: false,
-      // categoryList: categories
+      categoryList: categories
     })
   }
   render() {
@@ -45,7 +45,7 @@ export default class App extends Component<Props> {
             <Loader />
           )
           :
-            // <CategoryList list={categoryList} />
+            // <Categoria lista={categoryList} />
             <SuggestionList list={suggestionList}/>
         }
       </Home>
