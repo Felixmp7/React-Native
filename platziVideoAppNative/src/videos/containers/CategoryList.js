@@ -6,14 +6,14 @@ import {
 //Components
 import Empty from '../components/Empty'
 import VerticalSeparator from '../components/Separator'
-import Suggestion from '../components/Suggestion'
+import Category from '../components/Category'
 import CategoryListLayout from '../components/CategoryListLayout'
 
 
 class CategoryList extends Component {
   renderEmpty = () => <Empty text="No hay Categorias :("/>
   itemSeparator = () => <VerticalSeparator horizontal/>
-  renderItem = ({item}) => <Suggestion {...item}/>
+  renderItem = ({item}) => <Category {...item}/>
   keyExtractor = item => item.id.toString()
   render () {
     return (
