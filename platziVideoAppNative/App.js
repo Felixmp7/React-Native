@@ -1,6 +1,7 @@
 //React and Native Components
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
+import Video from 'react-native-video'
 //Containers
 import Home from './src/screens/containers/Home'
 import SuggestionList from './src/videos/containers/SuggestionList'
@@ -39,6 +40,23 @@ export default class App extends Component<Props> {
     return (
       <Home>
         <Header/>
+        <View style={{
+          flex: 1,
+          height: 100,
+          position: 'relative'
+        }}
+        >
+          <Video
+            source={{
+              uri: "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+            }}
+            style={{
+              width: 320,
+              height: 180
+            }}
+            resizeMode="contain"
+          />
+        </View>
         <Text>Aqui va el buscador</Text>
         <Text>Aqui van categorias</Text>
         {
