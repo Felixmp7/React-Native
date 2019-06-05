@@ -12,7 +12,10 @@ const Layout = props => {
         {props.video}
       </View>
       <View style={styles.overlay}>
-        {props.loader}
+        {
+          props.loading &&
+          props.loader
+        }
       </View>
     </View>
   );

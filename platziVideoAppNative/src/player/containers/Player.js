@@ -7,9 +7,18 @@ import Layout from '../components/Layout'
 import Loader from '../../widgets/components/Loader'
 
 class Player extends Component {
+  state = {
+    loading: true
+  }
+  onBuffer = ({ isBuffering }) => {
+    this.setState({
+      loading: isBuffering
+    })
+  }
   render () {
     return (
         <Layout
+          loading={this.state.loading}
           video={
             <Video
               source={{
@@ -17,6 +26,7 @@ class Player extends Component {
               }}
               style={styles.video}
               resizeMode="contain"
+              onBuffer={this.onBuffer}
             />
           }
           loader={
