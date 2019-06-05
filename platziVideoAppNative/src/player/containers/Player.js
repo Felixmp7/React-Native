@@ -11,7 +11,8 @@ import PlayPause from '../components/PlayPause'
 
 class Player extends Component {
   state = {
-    loading: true
+    loading: true,
+    paused: false
   }
   onBuffer = ({ isBuffering }) => {
     this.setState({
@@ -20,7 +21,9 @@ class Player extends Component {
   }
 
   playPause = () => {
-
+    this.setState({
+      paused: !this.state.paused
+    })
   }
   render () {
     return (
@@ -34,11 +37,13 @@ class Player extends Component {
               style={styles.video}
               resizeMode="contain"
               onBuffer={this.onBuffer}
+              paused={this.state.paused}
               //controls
               controls={
                 <ControlLayout>
                   <PlayPause
                     onPress={this.playPause}
+                    paused={this.state.paused}
                   />
                   <Text>progress bar</Text>
                   <Text>time left</Text>
