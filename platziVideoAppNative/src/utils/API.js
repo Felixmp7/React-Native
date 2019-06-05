@@ -10,7 +10,8 @@ class Api {
       return data.movies
     }
     catch(e){
-      console.log('Ha ocurrido un error')
+      console.log('Ha ocurrido un error en la llamada a las sugerencias')
+      console.log(e);
     }
   }
 
@@ -22,7 +23,8 @@ class Api {
         return data.movies
       }
       catch(e){
-        console.log('Ha ocurrido un error')
+        console.log('Ha ocurrido un error en la llamada a las peliculas')
+        console.log(e);
       }
   }
 }
