@@ -39,9 +39,8 @@ export default class App extends Component<Props> {
     } = this.state
     return (
       <Home>
-        <Text>Prueba</Text>
+        <Header/>
         <Player/>
-        {/* <Header/>
         <Text>Aqui va el buscador</Text>
         <Text>Aqui van categorias</Text>
         {
@@ -53,7 +52,7 @@ export default class App extends Component<Props> {
               <CategoryList list={categoryList} />
               <SuggestionList list={suggestionList}/>
             </View>
-        } */}
+        }
       </Home>
     );
   }
