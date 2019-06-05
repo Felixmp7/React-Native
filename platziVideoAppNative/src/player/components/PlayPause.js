@@ -19,6 +19,12 @@ const PlayPause = props => {
       onPress={props.onPress}
       style={styles.container}
       underlayColor="lightblue"
+      hitSlop={{ //Me permite aumentar el area del tab
+        top: 5,
+        left: 5,
+        right: 5,
+        bottom: 5
+      }}
     >
       {
         props.paused ?

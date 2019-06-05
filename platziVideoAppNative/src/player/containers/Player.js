@@ -29,17 +29,17 @@ class Player extends Component {
     return (
         <Layout
           loading={this.state.loading}
+          loader={
+            <Loader />
+          }
           video={
             <Video
-              source={{
-                uri: "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
-              }}
+              source={{uri: "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"}}
               style={styles.video}
               resizeMode="contain"
               onBuffer={this.onBuffer}
               paused={this.state.paused}
-              //controls
-              controls={
+              control={
                 <ControlLayout>
                   <PlayPause
                     onPress={this.playPause}
@@ -50,10 +50,8 @@ class Player extends Component {
                   <Text>full screen</Text>
                 </ControlLayout>
               }
+              //controls
             />
-          }
-          loader={
-            <Loader />
           }
           >
         </Layout>
