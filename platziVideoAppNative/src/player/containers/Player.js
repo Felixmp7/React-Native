@@ -32,7 +32,9 @@ class Player extends Component {
               //controls
               controls={
                 <ControlLayout>
-                  <PlayPause/>
+                  <PlayPause
+                    onPress={this.playPause}
+                  />
                   <Text>progress bar</Text>
                   <Text>time left</Text>
                   <Text>full screen</Text>
