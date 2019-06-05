@@ -7,7 +7,11 @@ import {
 
 const PlayPause = props => {
   return (
+    <TouchableHighlight
+      onPress={props.onPress}
+      >
 
+    </TouchableHighlight>
   );
 }
 
