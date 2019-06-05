@@ -5,6 +5,8 @@ import {
 import Video from 'react-native-video'
 import Layout from '../components/Layout'
 import Loader from '../../widgets/components/Loader'
+import ControlLayout from ''
+import PlayPause from ''
 
 class Player extends Component {
   state = {
@@ -27,6 +29,15 @@ class Player extends Component {
               style={styles.video}
               resizeMode="contain"
               onBuffer={this.onBuffer}
+              //controls
+              controls={
+                <ControlLayout>
+                  <PlayPause/>
+                  <Text>progress bar</Text>
+                  <Text>time left</Text>
+                  <Text>full screen</Text>
+                </ControlLayout>
+              }
             />
           }
           loader={
