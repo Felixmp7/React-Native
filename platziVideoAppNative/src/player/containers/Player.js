@@ -1,7 +1,10 @@
 import React, {Component} from 'react'
-import { StyleSheet } from 'react-native'
+import {
+  StyleSheet,
+ } from 'react-native'
 import Video from 'react-native-video'
 import Layout from '../components/Layout'
+import Loader from '../../widgets/components/Loader'
 
 class Player extends Component {
   render () {
@@ -15,6 +18,9 @@ class Player extends Component {
               style={styles.video}
               resizeMode="contain"
             />
+          }
+          loader={
+            <Loader />
           }
           >
         </Layout>

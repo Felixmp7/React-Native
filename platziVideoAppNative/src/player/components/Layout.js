@@ -11,6 +11,7 @@ const Layout = props => {
       <View style={styles.video}>
         {props.video}
       </View>
+      {props.loader}
     </View>
   );
 }
