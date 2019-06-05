@@ -11,25 +11,27 @@ const Layout = props => {
       <View style={styles.video}>
         {props.video}
       </View>
-      {props.loader}
+      <View style={styles.overlay}>
+        {props.loader}
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    // padding: 20,
-    //paddingTop: '56.25%',
     width: '100%',
-    // backgroundColor: 'lightblue',
     alignItems: 'center',
     justifyContent: 'center'
   },
   video:{
     width: '100%',
     maxHeight: 200
-    // position: 'absolute',
-    // top: 0
+  },
+  overlay: {
+    position: 'absolute',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 })
 
