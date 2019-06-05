@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {
   StyleSheet,
+  Text
  } from 'react-native'
 import Video from 'react-native-video'
 import Layout from '../components/Layout'
