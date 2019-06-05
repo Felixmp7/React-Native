@@ -41,7 +41,7 @@ export default class App extends Component<Props> {
       <Home>
         <Header/>
         <Player/>
-        {/* <Text>Aqui va el buscador</Text>
+        <Text>Aqui va el buscador</Text>
         <Text>Aqui van categorias</Text>
         {
           loading ? (
@@ -52,7 +52,7 @@ export default class App extends Component<Props> {
               <CategoryList list={categoryList} />
               <SuggestionList list={suggestionList}/>
             </View>
-        } */}
+        }
       </Home>
     );
   }

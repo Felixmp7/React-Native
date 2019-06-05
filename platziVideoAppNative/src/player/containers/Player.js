@@ -39,18 +39,18 @@ class Player extends Component {
               resizeMode="contain"
               onBuffer={this.onBuffer}
               paused={this.state.paused}
-              control={
-                <ControlLayout>
-                  <PlayPause
-                    onPress={this.playPause}
-                    paused={this.state.paused}
-                  />
-                  <Text>progress bar</Text>
-                  <Text>time left</Text>
-                  <Text>full screen</Text>
-                </ControlLayout>
-              }
-              //controls
+              // control={
+              //   <ControlLayout>
+              //     <PlayPause
+              //       onPress={this.playPause}
+              //       paused={this.state.paused}
+              //     />
+              //     <Text>progress bar</Text>
+              //     <Text>time left</Text>
+              //     <Text>full screen</Text>
+              //   </ControlLayout>
+              // }
+              controls
             />
           }
           >
