@@ -1,11 +1,17 @@
 import React from 'react'
 import {
-  TouchableHighlight, //Cuando mantengo presionado
-  TouchableOpacity, // Justo al momento de hacer tab
-  TouchableWithoutFeedback, // Reacciona sin efecto alguno
+  TouchableHighlight, //al mantener presionado el componente cambia de color.
+  TouchableOpacity, // al mantener presionado, el componente se hace un poco transparente (baja su opacidad).
+  TouchableWithoutFeedback, // No tiene efectos visuales al mantener presionado el botón.
   Text,
   StyleSheet
 } from 'react-native'
+
+// La propiedad onPress para realizar eventos en ReactNative solo funciona con
+// los componentes Touchable.
+
+// La propiedad underlayColor cambia el color que se va a cambiar al
+// mantener presionado el componente TouchableHighlight.
 
 const PlayPause = props => {
   return (
