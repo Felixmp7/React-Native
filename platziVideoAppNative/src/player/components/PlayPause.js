@@ -18,6 +18,7 @@ const PlayPause = props => {
     <TouchableHighlight
       onPress={props.onPress}
       style={styles.container}
+      underlayColor="lightblue"
     >
       {
         props.paused ?
