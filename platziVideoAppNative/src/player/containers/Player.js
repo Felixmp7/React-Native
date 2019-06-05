@@ -5,8 +5,8 @@ import {
 import Video from 'react-native-video'
 import Layout from '../components/Layout'
 import Loader from '../../widgets/components/Loader'
-import ControlLayout from ''
-import PlayPause from ''
+import ControlLayout from '../components/ControlLayout'
+import PlayPause from '../components/PlayPause'
 
 class Player extends Component {
   state = {
@@ -16,6 +16,10 @@ class Player extends Component {
     this.setState({
       loading: isBuffering
     })
+  }
+
+  playPause = () => {
+
   }
   render () {
     return (
