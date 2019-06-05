@@ -25,8 +25,9 @@ class Player extends Component {
 const styles = StyleSheet.create({
   video: {
     width: '100%',
-    position: 'absolute',
-    top: 0
+    height: '100%'
+    // position: 'absolute',
+    // top: 0
   }
 })
 

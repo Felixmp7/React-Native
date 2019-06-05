@@ -17,12 +17,18 @@ const Layout = props => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: '56.25%'
+    // padding: 20,
+    //paddingTop: '56.25%',
+    width: '100%',
+    // backgroundColor: 'lightblue',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   video:{
     width: '100%',
-    position: 'absolute',
-    top: 0
+    maxHeight: 200
+    // position: 'absolute',
+    // top: 0
   }
 })
 
