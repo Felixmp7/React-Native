@@ -2,7 +2,8 @@
 import React, {Component} from 'react'
 import {
   FlatList,
-  Text
+  Text,
+  ScrollView
 } from 'react-native'
 //Components
 import Layout from '../components/SuggestionListLayout'
@@ -17,19 +18,21 @@ class SuggestionList extends Component {
   keyExtractor = item => item.id.toString()
   render () {
     return (
-      <Layout
-        title="Recomendado para ti"
-      >
-        <FlatList
-          data={this.props.list}
-          keyExtractor={this.keyExtractor}
-          // keyExtractor es puro performance, me evita el re renderizado si no hay cambios
-          renderItem={this.renderItem}
-          ListEmptyComponent={this.renderEmpty}
-          // ListEmptyComponent Me permite renderizar un componente si la lista está vacía.
-          ItemSeparatorComponent={this.itemSeparator}
-        />
-      </Layout>
+      <ScrollView>
+        <Layout
+          title="Recomendado para ti"
+          >
+            <FlatList
+              data={this.props.list}
+              keyExtractor={this.keyExtractor}
+              // keyExtractor es puro performance, me evita el re renderizado si no hay cambios
+              renderItem={this.renderItem}
+              ListEmptyComponent={this.renderEmpty}
+              // ListEmptyComponent Me permite renderizar un componente si la lista está vacía.
+              ItemSeparatorComponent={this.itemSeparator}
+            />
+          </Layout>
+      </ScrollView>
     )
   }
 }
